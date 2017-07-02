@@ -4,7 +4,6 @@ class AdvertisementController < ApplicationController
   end
 
   def show
-    
   end
 
   def new
