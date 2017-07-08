@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html, charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<h1>You're now following "<%= @post.title %>"</h1>
+<p>You will be notified of all comments. If you change your mind,
+  unfavorite your <%= link_to "post", topic_post_url(@post.topic, @post) %>.</p>
+<p>
+  <%= link_to "View Post", topic_post_url(@post.topic, @post) %>
+</p>
+</body>
+</html>
