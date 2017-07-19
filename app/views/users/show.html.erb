@@ -23,4 +23,15 @@
  <%= render @user.posts %>
  
  <h2>Comments</h2>
- <%= render @user.comments %>
+<% if user_created_comments?(@user) %>
+    <%= render @user.comments %>
+<% else %>
+    No comments to display
+<% end %>
+
+<h2>Favorites</h2>
+<% if user_favorited_posts?(@user) %>
+    <%= render @user.favorites.map(&:post) %>
+<% else %>
+    No favorites to display
+<% end %>
